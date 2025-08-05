@@ -1,7 +1,8 @@
 import { Container, Box, Grid, Button } from "@mui/material";
-
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
 
   return (
     <Container maxWidth={false} sx={{ paddingRight: "0px", paddingLeft: "0px" }} disableGutters>
@@ -22,7 +23,8 @@ const Header = () => {
             <Button variant="text">Curriculum</Button>
           </Grid>
           <Grid item size={1}>
-            <Button variant="text">Enrollment</Button>
+            <Button variant="text" onClick={() => navigate('/enrollment')}>
+              Enrollment</Button>
           </Grid>
         </Grid>
       </Box>
