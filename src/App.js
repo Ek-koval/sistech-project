@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Enrollment from './components/Enrollment';
+import Curriculum from "./components/Curriculum";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
@@ -10,6 +11,7 @@ function App() {
     <Router>
       <Header /> {/* Always shown */}
       <Routes>
+        <Route path="/curriculum" element={<Curriculum />} />
         <Route path="/enrollment" element={<Enrollment />} />
       </Routes>
       <Footer /> {/* Always shown */}
