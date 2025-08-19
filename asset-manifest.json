@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sistech-project/static/css/main.4c1a5240.css",
+    "main.js": "/sistech-project/static/js/main.d152ac32.js",
+    "static/js/453.cecd61e0.chunk.js": "/sistech-project/static/js/453.cecd61e0.chunk.js",
+    "index.html": "/sistech-project/index.html",
+    "main.4c1a5240.css.map": "/sistech-project/static/css/main.4c1a5240.css.map",
+    "main.d152ac32.js.map": "/sistech-project/static/js/main.d152ac32.js.map",
+    "453.cecd61e0.chunk.js.map": "/sistech-project/static/js/453.cecd61e0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c1a5240.css",
+    "static/js/main.d152ac32.js"
+  ]
+}
