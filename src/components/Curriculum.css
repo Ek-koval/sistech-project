@@ -1,8 +1,9 @@
 /* ==== Загальні стилі ==== */
 .curriculum-page {
-    background-color: #f5f5f5;
+    background-color:#dddbda;
     padding-bottom: 50px;
     font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: "Moul", sans-serif;
 }
 
 /* ==== Header Section ==== */
@@ -19,22 +20,27 @@
 }
 
 .curriculum-title {
-    font-size: 38px;
-    font-weight: bold;
-    color: #3b4b12;
+    font-family: "Moul", sans-serif; 
+    font-size: 48px;
+    color: #405500;
+    font-weight: bold; 
     line-height: 1.3;
     margin-bottom: 20px;
 }
 
 .call-now-btn {
-    background-color: #ff9900 !important;
-    color: white !important;
-    padding: 12px 30px;
-    font-weight: bold;
-    border-radius: 6px;
-    text-transform: none;
-    font-size: 16px;
-    box-shadow: none;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 30px;
+    padding: 8px 78px;
+    width: 298px;
+    height: 35px;
+    background: #f0831d;
+
 }
 
 .call-now-btn:hover {
@@ -42,10 +48,12 @@
 }
 
 .curriculum-header img {
-    max-width: 500px;
+    max-width: 600px;
+    height: 100%;
     width: 100%;
-    border-radius: 12px;
+    border-radius: 20px;
 }
+
 
 /* ==== Section Title ==== */
 .section-title {

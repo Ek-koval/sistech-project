@@ -19,7 +19,7 @@ const Curriculum = () => {
             Call now
           </Button>
         </div>
-        <img src="/public/images/hero.jpg" alt="Kids playing" />
+        <img src="/images/hero.png" alt="Kids playing" />
       </Container>
 
       {/* ===== Curriculum Section ===== */}
@@ -45,25 +45,25 @@ const Curriculum = () => {
               icon: <BrushIcon color="primary" />,
               title: "Creative Arts",
               text: "Encouraging expression through music, art, and drama.",
-              img: "/public/images/creative.png",
+              img: "/images/creative.png",
             },
             {
               icon: <ScienceIcon color="primary" />,
               title: "Science & Nature",
               text: "Hands-on activities that promote inquiry and discovery.",
-              img: "/public/images/science.png",
+              img: "/images/science.png",
             },
             {
               icon: <FunctionsIcon color="primary" />,
               title: "Mathematics",
               text: "Fun, interactive ways to explore numbers and problem-solving.",
-              img: "/public/images/math.png",
+              img: "/images/math.png",
             },
             {
               icon: <MenuBookIcon color="primary" />,
               title: "Language & Literacy",
               text: "Developing strong communication skills through storytelling, reading, and writing.",
-              img: "/public/images/language.png",
+              img: "/images/language.png",
             },
           ].map((item, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
