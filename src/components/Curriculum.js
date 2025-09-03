@@ -45,7 +45,7 @@ const Curriculum = () => {
               icon: <BrushIcon color="primary" />,
               title: "Creative Arts",
               text: "Encouraging expression through music, art, and drama.",
-              img: "/images/creative.png",
+              img: "creative.png",
             },
             {
               icon: <ScienceIcon color="primary" />,
