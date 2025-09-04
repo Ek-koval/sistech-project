@@ -14,7 +14,7 @@ const Header = () => {
             <img
               src={`logo.png`}
               alt='Logo'
-              height={50}
+              height={38}
             />
           </Grid>
 

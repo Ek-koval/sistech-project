@@ -7,6 +7,46 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 import "./Curriculum.css";
 
 const Curriculum = () => {
+  // Дані для секцій
+  const sections = [
+    {
+      paragraph:
+        "Our curriculum at A Kids Place Childcare is designed to ignite curiosity and foster a love of learning. We offer a balanced program that combines structured educational activities with plenty of time for play and exploration.",
+      cards: [
+        {
+          icon: <BrushIcon color="primary" />,
+          title: "Creative Arts",
+          text: "Encouraging expression through music, art, and drama.",
+          img: "/images/creative.png",
+        },
+        {
+          icon: <ScienceIcon color="primary" />,
+          title: "Science & Nature",
+          text: "Hands-on activities that promote inquiry and discovery.",
+          img: "/images/science.png",
+        },
+      ],
+    },
+    {
+      paragraph:
+        "We tailor our programs to suit the developmental stages of each age group, ensuring that every child can progress at their own pace. Our goal is to provide a holistic education that supports cognitive, social, emotional, and physical development.",
+      cards: [
+        {
+          icon: <FunctionsIcon color="primary" />,
+          title: "Mathematics",
+          text: "Fun, interactive ways to explore numbers and problem-solving.",
+          img: "/images/math.png",
+        },
+        {
+          icon: <MenuBookIcon color="primary" />,
+          title: "Language & Literacy",
+          text: "Developing strong communication skills through storytelling, reading, and writing.",
+          img: "/images/language.png",
+        },
+      ],
+    },
+  ];
+
   return (
     <div className="curriculum-page">
       {/* ===== Header Section ===== */}
@@ -23,60 +63,32 @@ const Curriculum = () => {
       </Container>
 
       {/* ===== Curriculum Section ===== */}
-      <Container>
+     <Container>
         <h2 className="section-title">Curriculum</h2>
-        <p className="section-description">
-          Our curriculum at A Kids Place Childcare is designed to ignite
-          curiosity and foster a love of learning. We offer a balanced program
-          that combines structured educational activities with plenty of time
-          for play and exploration.
-        </p>
-        <p className="section-description">
-          We tailor our programs to suit the developmental stages of each age
-          group, ensuring that every child can progress at their own pace. Our
-          goal is to provide a holistic education that supports cognitive,
-          social, emotional, and physical development.
-        </p>
 
-        {/* ===== Cards Section ===== */}
-        <Grid container spacing={3} className="curriculum-cards">
-          {[
-            {
-              icon: <BrushIcon color="primary" />,
-              title: "Creative Arts",
-              text: "Encouraging expression through music, art, and drama.",
-              img: "creative.png",
-            },
-            {
-              icon: <ScienceIcon color="primary" />,
-              title: "Science & Nature",
-              text: "Hands-on activities that promote inquiry and discovery.",
-              img: "/images/science.png",
-            },
-            {
-              icon: <FunctionsIcon color="primary" />,
-              title: "Mathematics",
-              text: "Fun, interactive ways to explore numbers and problem-solving.",
-              img: "/images/math.png",
-            },
-            {
-              icon: <MenuBookIcon color="primary" />,
-              title: "Language & Literacy",
-              text: "Developing strong communication skills through storytelling, reading, and writing.",
-              img: "/images/language.png",
-            },
-          ].map((item, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
-              <div className="curriculum-card">
-                <img src={item.img} alt={item.title} />
-                <div className="curriculum-card-content">
-                  <h3 className="curriculum-card-title">
-                    {item.icon}
-                    {item.title}
-                  </h3>
-                  <p className="curriculum-card-text">{item.text}</p>
-                </div>
-              </div>
+        {/* Контейнер для 2 колонок */}
+        <Grid className="grid_container" container spacing={4}>
+          {sections.map((section, i) => (
+            <Grid   item xs={12} md={6} key={i}>
+              {/* Абзац */}
+              <p className="section-description">{section.paragraph}</p>
+
+              {/* Дві картки під абзацом */}
+              <Grid container spacing={2}>
+                {section.cards.map((card, j) => (
+                  <Grid item xs={3} key={j}>
+                    <div className="curriculum-card">
+                      <img src={card.img} alt={card.title} />
+                      <div className="curriculum-card-content">
+                        <h3 className="curriculum-card-title">
+                          {card.icon} {card.title}
+                        </h3>
+                        <p className="curriculum-card-text">{card.text}</p>
+                      </div>
+                    </div>
+                  </Grid>
+                ))}
+              </Grid>
             </Grid>
           ))}
         </Grid>
