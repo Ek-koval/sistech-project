@@ -1,47 +1,49 @@
-import { Container, Box, Grid, ImageList, ImageListItem, Typography } from "@mui/material";
-
+import { Container, Box, Typography } from "@mui/material";
 
 const Footer = () => {
+  return (
+    <Container maxWidth={false} disableGutters>
+      <Box
+        sx={{
+          bgcolor: "rgba(198, 148, 82, 0.85)",
+          height: "226px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          px: "183px", // відступи зліва і справа
+        }}
+      >
+        {/* Логотип + Facebook */}
+        <Box sx={{ display: "flex", alignItems: "center", gap: "20px" }}>
+          <img src="logo.png" alt="Logo" style={{ height: "40px" }} />
+          <img src="facebook.png" alt="Facebook" style={{ height: "40px" }} />
+        </Box>
 
-    return (
-        <Container maxWidth={false} sx={{ paddingRight: "0px", paddingLeft: "0px" }} disableGutters>
-            <Box sx={{ bgcolor: 'rgba(198, 148, 82, 0.85)', height: '226px', width: '1' }}>
-                <Grid container spacing={2} style={{ display: "flex", alignItems: "center", height: '226px' }}>
-                    <Grid item style={{ display: "flex", alignItems: "center", paddingLeft: "183px" }} direction="row"
-                        alignItems="flex-end"
-                        justify="center" size={6}>
+        {/* Адреса + контакти */}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-end",
+            textAlign: "right",
+          }}
+        >
+          <Typography variant="body1">
+            30121 Lorain Rb. Norb Olmster, OH 44070
+          </Typography>
+          <Typography variant="body1">
+            440-778-5671 or{" "}
+            <a
+              href="mailto:mskapes@gmail.com"
+              style={{ color: "inherit", textDecoration: "underline" }}
+            >
+              mskapes@gmail.com
+            </a>
+          </Typography>
+        </Box>
+      </Box>
+    </Container>
+  );
+};
 
-                        <ImageList cols={6}>
-                            <ImageListItem key="Logo">
-                                <Box>
-                                <img
-                                    srcSet={`logo.png`}
-                                    src={`logo.png`}
-                                    alt='Logo'
-                                    sx={{ height: '33px' }}
-                                />
-                                </Box>
-                            </ImageListItem>
-                            <ImageListItem key="Facebook">
-                                <Box>
-                                    <img
-                                        srcSet={`facebook.png`}
-                                        src={`facebook.png`}
-                                        alt='Facebook'
-                                        sx={{ height: '33px' }}
-                                    />
-                                </Box>
-                            </ImageListItem>
-                        </ImageList>
-
-                    </Grid>
-                    <Grid item size={6}>
-                        <Typography>30121 Lorain Rb. Norb Olmster, OH 44070</Typography>
-                        <Typography>440-778-5671 or mskapes@gmail.com</Typography>
-                    </Grid>
-                </Grid>
-            </Box>
-        </Container>
-    );
-}
 export default Footer;
