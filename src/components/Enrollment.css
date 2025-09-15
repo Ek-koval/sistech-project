@@ -21,17 +21,12 @@
     padding-left: 50px;
     
 }
+
 .upperGridImage{
-    display: flex;
-    flex-direction: column;
     width: 80%;
-    height: 60%;
-    padding-right: 100px;
-    
-  
-   
-   
+  height: auto; /* keeps aspect ratio */  
 }
+
 .callNowForm{
 display: flex;
   flex-direction: column;  
