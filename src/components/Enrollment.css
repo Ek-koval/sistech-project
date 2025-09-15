@@ -10,35 +10,69 @@
     margin-bottom: 20px;
 }
 
-.upperContainer{
-    padding-bottom: 70px;
+.upperGrid{
+    padding-bottom: 60px;
+    padding-top: 60px;
+    padding-left: 100px;
+    padding-right: 50px;
+
+}
+.upperGridTitle{
+    padding-left: 50px;
+    
+}
+.upperGridImage{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 60%;
+    padding-right: 100px;
+    
+  
+   
+   
+}
+.callNowForm{
+display: flex;
+  flex-direction: column;  
+  gap: 16px;               
+  max-width: 100%;
+  height: 60%;
+  padding-right: 100px;
+   
+  
+}
+
+.lowerGrid{
+   padding-bottom: 60px;
+   padding-right: 50px;
+   padding-left: 50px;
 
 }
 
-.lowerContainer{
-    padding-bottom: 70px;
-
-}
-.firstImage{
-    height: auto;
-    width: 70%;
-}
-.secondImage{
+.lowerGridImage{
     height: auto;
     width: 100%;
+    
+}
+
+.enrollmentTitle{
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column; 
+    height: 100%; 
 }
 
 .enrollmentDetails{
-    padding-left: 60px;
-    padding-right: 60px;
+   padding-top: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
     color: #333;
-    
     font-size: 16px;
     display: flex;
     flex-direction: column; 
     height: 100%; 
 
 }
-.enrollmentHours{
-    text-align: center;
-}
+
+

@@ -39,41 +39,28 @@ function Enrollment() {
 
     return (
         
-            <Container maxWidth={false} disableGutters sx={{ paddingX: 0 }} >
-                <Box sx={{ bgcolor: '#dddbda', width: '100%', py: 4 }}>
-
-                    <Grid container spacing={4} alignItems="center" className="upperContainer">
-                        <Grid item size={{xs:12, md:4}} sx={{ textAlign: 'center'}}>
-                            <Box sx={{ paddingLeft: 4 }}>
-                                <p>
-                                <h1 className="title">Join our family at a Kids Place Childcare</h1>
-                                </p>
-                                
-                                <Box
-                                    component="form"
-                                    onSubmit={handleCallNow}
-                                    sx={{ display: 'flex', flexDirection: 'column', gap: 2, maxWidth: 1 }}
-                                >
-                                <Typography>
-                                    Name
-                                    </Typography>
-
+            <Container maxWidth={false} disableGutters sx={{ bgcolor: '#dddbda'}}>
+                
+                    {/*this is the upper grid*/}
+                    <Grid container spacing={4} alignItems="center" className="upperGrid">
+                        {/*this is the first grid inside the upper grid*/}
+                        <Grid item size={{xs:12, md:4}} className="upperGridTitle">
+                            
+                                <p> <h1 className="title">Join our family at a Kids Place Childcare</h1> </p>
+                                {/*this is where the contact form starts*/}
+                                <Box component="form" onSubmit={handleCallNow} className='callNowForm'>
+                                <Typography>Name</Typography>
+                                    <TextField  
+                                    name="name" 
+                                    value={formData.name} 
+                                    onChange={handleChange} 
+                                    error={!!errors.name} 
+                                    helperText={errors.name} 
+                                    sx={{backgroundColor: 'white'}}
+                                    /> 
+                            
+                                <Typography>Phone</Typography>
                                     <TextField
-                                        
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        error={!!errors.name}
-                                        helperText={errors.name}
-                                        sx={{backgroundColor: 'white',}} 
-                                    />
-
-                                    <Typography>
-                                    Phone
-                                    </Typography>
-
-                                    <TextField
-                                        
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleChange}
@@ -81,11 +68,9 @@ function Enrollment() {
                                         helperText={errors.phone}
                                         sx={{backgroundColor: 'white',}}
                                     />
-                                    <Typography>
-                                    Email
-                                    </Typography>
+
+                                    <Typography>Email</Typography>
                                     <TextField
-                                        
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
@@ -93,66 +78,67 @@ function Enrollment() {
                                         helperText={errors.email}
                                         sx={{backgroundColor: 'white',}}
                                     />
+
                                     <Button variant="contained" type="submit"style={{backgroundColor: '#F0831D'}}>
                                         Call Now
                                     </Button>
-                                </Box>
-                            </Box>
+                                </Box>  
                         </Grid>
-                        
-                        <Grid item size={{xs:12, md:8}} sx={{ textAlign: 'center'}}>
-                            <img src={"image1.png"} alt="Image1" className="firstImage"/> 
+
+                        {/*this is the second grid inside the upper grid*/}
+                        <Grid item size={{xs:12, md:8}} >
+                            <img src={"image1.png"} alt="Image1" className="upperGridImage"/> 
                         </Grid>
                     </Grid>
 
-
-                    <Grid container spacing={4} alignItems="center" className="lowerContainer">
-                        <Grid item size={{xs:12, md:4}} sx={{ textAlign: 'center'}}>
-                                <h1 className="title"> Enrolment</h1>
+                    {/*this is the lower grid*/}
+                    <Grid container spacing={4} alignItems="center" className="lowerGrid">
+                        {/*this is the first grid inside the lower grid*/}
+                        <Grid item size={{xs:12, md:4}} className="enrollmentTitle">
+                                <h1 className="title"> Enrollment</h1>
                                 <h2>Join our family at a Kids Place Childcare</h2>
-                                <img src={`image2.png`} alt='Image2' className="secondImage" />   
+                                <img src={`image2.png`} alt='Image2' className="lowerGridImage" />   
                         </Grid>
-
+                        {/*this is the second grid inside the lower grid*/}
                         <Grid item size={{xs:12, md:8}} className="enrollmentDetails" >
-                            <p>
-                            We are thrilled to welcome new families to A Kids Place Childcare! Enrolling your child in our program is easy and we are here to assist you every step of the way.
-
-                            </p>
-                            <p>
-                                **How to Enrol:**
-                            </p>
-                            <p >
-                                <ol>
-                                    <li>
-                                    **Tour Our Facility:** Schedule a visit to see our vibrant learning spaces and meet our friendly staff.
-                                    </li>
-                                    <li>
-                                    **Meet &amp; Greet:** Join us for a meeting to discuss your child’s needs and our program offerings.
-                                    </li>
-                                    <li>
-                                    **Complete the Application:** Fill out the enrolment forms and provide necessary documents.
-                                    </li>
-                                    <li>
-                                    **Secure Your Spot:** Submit the required deposit to secure your child’s place in our program.
-                                    </li>
-                                </ol>
+                            
+                                                    <p>
+                                We are thrilled to welcome new families to A Kids Place Childcare! 
+                                Enrolling your child in our program is easy and we are here to assist you every step of the way.
                             </p>
 
+                            <h3>How to Enrol:</h3>
+
+                            <ol>
+                                <li>
+                                <strong>Tour Our Facility:</strong> Schedule a visit to see our vibrant learning spaces and meet our friendly staff.
+                                </li>
+                                <li>
+                                <strong>Meet & Greet:</strong> Join us for a meeting to discuss your child’s needs and our program offerings.
+                                </li>
+                                <li>
+                                <strong>Complete the Application:</strong> Fill out the enrolment forms and provide necessary documents.
+                                </li>
+                                <li>
+                                <strong>Secure Your Spot:</strong> Submit the required deposit to secure your child’s place in our program.
+                                </li>
+                            </ol>
+
                             <p>
-                                For more information or to start the enrolment process, please contact us at 440-778-5671 or mskapes@gmail.com.
+                                For more information or to start the enrolment process, please contact us at <a href="tel:4407785671">440-778-5671</a> or <a href="mailto:mskapes@gmail.com">mskapes@gmail.com</a>.
                             </p>
 
-                            <p className = "enrollmentHours">
-                                **Enrolment Hours:**<br />
+                            <p>
+                                <strong>Enrolment Hours:</strong><br />
                                 Monday to Friday, 8:00 AM - 5:00 PM
                             </p>
 
                             <p>
                                 We look forward to partnering with you in your child's early education journey!
-                            </p> 
+                            </p>
                         </Grid>
                     </Grid>
-                </Box>
+             
             </Container>
        
     );
