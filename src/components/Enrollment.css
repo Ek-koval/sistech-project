@@ -1,0 +1,44 @@
+
+
+
+.title {
+    font-family: "Moul", sans-serif; 
+    font-size: 48px;
+    color: #405500;
+    font-weight: bold; 
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.upperContainer{
+    padding-bottom: 70px;
+
+}
+
+.lowerContainer{
+    padding-bottom: 70px;
+
+}
+.firstImage{
+    height: auto;
+    width: 70%;
+}
+.secondImage{
+    height: auto;
+    width: 100%;
+}
+
+.enrollmentDetails{
+    padding-left: 60px;
+    padding-right: 60px;
+    color: #333;
+    
+    font-size: 16px;
+    display: flex;
+    flex-direction: column; 
+    height: 100%; 
+
+}
+.enrollmentHours{
+    text-align: center;
+}
