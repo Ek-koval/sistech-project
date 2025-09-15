@@ -1,4 +1,4 @@
-/* ==== Загальні стилі ==== */
+/* ==== Common styles ==== */
 .curriculum-page {
     background-color:#dddbda;
     padding-bottom: 50px;
@@ -72,6 +72,7 @@
 }
 
 /* ==== Cards Section ==== */
+
 .curriculum-cards {
     margin-top: 30px;
 }
@@ -115,8 +116,19 @@
     line-height: 1.4;
 }
 
+.grid_container {
+    flex-wrap: nowrap !important;
+}
 
-/* ==== Адаптивність ==== */
+.css-zjhuaj-MuiGrid-root {
+    flex-wrap: nowrap !important;
+}
+
+.css-zjhuaj-MuiGrid-root {
+    flex-wrap: nowrap !important;
+}
+
+/* ==== Adattabilità ==== */
 @media (max-width: 768px) {
     .curriculum-header {
         flex-direction: column;
