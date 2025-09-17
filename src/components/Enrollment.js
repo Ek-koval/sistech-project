@@ -82,11 +82,12 @@ function Enrollment() {
                                     <Button variant="contained" type="submit"style={{backgroundColor: '#F0831D'}}>
                                         Call Now
                                     </Button>
-                                </Box>  
+                                </Box>
+
                         </Grid>
 
                         {/*this is the second grid inside the upper grid*/}
-                        <Grid item size={{xs:12, md:8}} >
+                        <Grid item size={{xs:12, md:8}} style={{justifyContent: 'center', textAlign: 'center'}}>
                             <img src={"image1.png"} alt="Image1" className="upperGridImage"/> 
                         </Grid>
                     </Grid>
